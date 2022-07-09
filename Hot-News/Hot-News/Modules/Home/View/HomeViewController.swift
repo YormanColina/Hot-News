@@ -34,8 +34,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.callService()
-            .subscribe { post in
-                print(post)
+            .subscribe { posts in
                 self.collectionView.reloadData()
             }.disposed(by: disposeBag)
         setupUI()
@@ -55,7 +54,6 @@ class HomeViewController: UIViewController {
     func setupUI() {
         collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
         profileImage.layer.cornerRadius = profileImage.bounds.height / 2
-        collectionView.backgroundColor = UIColor(named: "superLightGray")
     }
     
     // MARK: IBActions
@@ -91,12 +89,11 @@ extension HomeViewController: UICollectionViewDataSource {
         return header
         
     }
-    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 380, height: 120)
+        return CGSize(width: 360, height: 110)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20.0
@@ -105,7 +102,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        present(CommetsViewController(), animated: true)
+        present(CommetsViewController(post: viewModel.posts[indexPath.row]), animated: true)
     }
 }
 

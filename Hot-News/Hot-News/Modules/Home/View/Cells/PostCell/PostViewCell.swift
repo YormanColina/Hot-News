@@ -24,8 +24,6 @@ class PostViewCell: UICollectionViewCell {
     
     //MARK: Methods
     private func setupUICell() {
-        
-        
         leadingView.backgroundColor = .blue
         leadingView.backgroundColor = UIColor(named: "customBlue")
         userPostImageView.layer.cornerRadius = userPostImageView.bounds.height / 2
@@ -41,19 +39,20 @@ class PostViewCell: UICollectionViewCell {
         layer.cornerRadius = 20
         layer.borderWidth = 0.1
         layer.borderColor = UIColor.darkGray.cgColor
-        
         contentView.layer.cornerRadius = 20
         contentView.layer.masksToBounds = true
-        
-        
     }
     
     func configurateCell(post: Post) {
-        titlePostLabel.text = post.title
+        titlePostLabel.text = post.title.capitalized
         descriptionLabel.text = post.body
     }
 
     @IBAction func pressLike(_ sender: Any) {
-        print("se dio like")
+        
+    }
+    
+    func sendLike() -> Int {
+        return 1
     }
 }

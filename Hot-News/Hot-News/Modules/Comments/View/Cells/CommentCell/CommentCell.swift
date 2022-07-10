@@ -20,7 +20,7 @@ class CommentCell: UICollectionViewCell {
     }
     
     func configurateCell(comment: Comment) {
-        nameLabel.text = comment.name
+        nameLabel.text = comment.name.capitalized
         emailLabel.text = comment.email
         commentLabel.text = comment.body
     }

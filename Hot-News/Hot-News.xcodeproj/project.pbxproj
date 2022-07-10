@@ -15,6 +15,11 @@
 		18310082287A1AD300027C00 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18310081287A1AD300027C00 /* Company.swift */; };
 		18310087287A2F8100027C00 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18310085287A2F8100027C00 /* DescriptionCell.swift */; };
 		18310088287A2F8100027C00 /* DescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18310086287A2F8100027C00 /* DescriptionCell.xib */; };
+		18310093287B424900027C00 /* HeaderProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18310091287B424900027C00 /* HeaderProfileCell.swift */; };
+		18310094287B424900027C00 /* HeaderProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18310092287B424900027C00 /* HeaderProfileCell.xib */; };
+		18310096287B439900027C00 /* ViewModelProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18310095287B439900027C00 /* ViewModelProfile.swift */; };
+		18310099287B4AB600027C00 /* ApiServiceProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18310098287B4AB600027C00 /* ApiServiceProfile.swift */; };
+		1831009E287B663500027C00 /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1831009D287B663500027C00 /* PostViewCell.xib */; };
 		18503F682879E1AD006CCF9D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18503F672879E1AD006CCF9D /* UIViewExtension.swift */; };
 		18503F6E2879EF69006CCF9D /* ViewModelComments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18503F6D2879EF69006CCF9D /* ViewModelComments.swift */; };
 		18503F712879F027006CCF9D /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18503F702879F027006CCF9D /* ApiServices.swift */; };
@@ -34,10 +39,7 @@
 		18CEBF1C287897480089F40D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF1A287897470089F40D /* OnBoardingViewController.swift */; };
 		18CEBF1D287897480089F40D /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF1B287897470089F40D /* OnBoardingViewController.xib */; };
 		18CEBF252878980F0089F40D /* PostViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF232878980F0089F40D /* PostViewCell.swift */; };
-		18CEBF262878980F0089F40D /* PostViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF242878980F0089F40D /* PostViewCell.xib */; };
 		18CEBF282878A46C0089F40D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF272878A46C0089F40D /* Colors.xcassets */; };
-		18CEBF332878BBF10089F40D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF312878BBF10089F40D /* HeaderView.swift */; };
-		18CEBF342878BBF10089F40D /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF322878BBF10089F40D /* HeaderView.xib */; };
 		18CEBF382878ECAD0089F40D /* CommetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF362878ECAD0089F40D /* CommetsViewController.swift */; };
 		18CEBF392878ECAD0089F40D /* CommetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF372878ECAD0089F40D /* CommetsViewController.xib */; };
 		18CEBF3C2878F1980089F40D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF3A2878F1980089F40D /* ProfileViewController.swift */; };
@@ -73,6 +75,11 @@
 		18310081287A1AD300027C00 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		18310085287A2F8100027C00 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		18310086287A2F8100027C00 /* DescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionCell.xib; sourceTree = "<group>"; };
+		18310091287B424900027C00 /* HeaderProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderProfileCell.swift; sourceTree = "<group>"; };
+		18310092287B424900027C00 /* HeaderProfileCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderProfileCell.xib; sourceTree = "<group>"; };
+		18310095287B439900027C00 /* ViewModelProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProfile.swift; sourceTree = "<group>"; };
+		18310098287B4AB600027C00 /* ApiServiceProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceProfile.swift; sourceTree = "<group>"; };
+		1831009D287B663500027C00 /* PostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewCell.xib; sourceTree = "<group>"; };
 		18503F672879E1AD006CCF9D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18503F6D2879EF69006CCF9D /* ViewModelComments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelComments.swift; sourceTree = "<group>"; };
 		18503F702879F027006CCF9D /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
@@ -96,10 +103,7 @@
 		18CEBF1A287897470089F40D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		18CEBF1B287897470089F40D /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		18CEBF232878980F0089F40D /* PostViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewCell.swift; sourceTree = "<group>"; };
-		18CEBF242878980F0089F40D /* PostViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostViewCell.xib; sourceTree = "<group>"; };
 		18CEBF272878A46C0089F40D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		18CEBF312878BBF10089F40D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		18CEBF322878BBF10089F40D /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		18CEBF362878ECAD0089F40D /* CommetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommetsViewController.swift; sourceTree = "<group>"; };
 		18CEBF372878ECAD0089F40D /* CommetsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommetsViewController.xib; sourceTree = "<group>"; };
 		18CEBF3A2878F1980089F40D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +172,56 @@
 				18310086287A2F8100027C00 /* DescriptionCell.xib */,
 			);
 			path = DescriptionCell;
+			sourceTree = "<group>";
+		};
+		18310089287B414800027C00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18CEBF3A2878F1980089F40D /* ProfileViewController.swift */,
+				18CEBF3B2878F1980089F40D /* ProfileViewController.xib */,
+				1831008C287B416F00027C00 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1831008A287B415300027C00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1831008B287B415D00027C00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				18310095287B439900027C00 /* ViewModelProfile.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1831008C287B416F00027C00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18310091287B424900027C00 /* HeaderProfileCell.swift */,
+				18310092287B424900027C00 /* HeaderProfileCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		18310097287B4AA100027C00 /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				18310098287B4AB600027C00 /* ApiServiceProfile.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		1831009A287B642000027C00 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18CEBF1E287897A30089F40D /* PostCell */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		18503F662879E166006CCF9D /* Extensions */ = {
@@ -311,8 +365,10 @@
 		18CEBF05287885550089F40D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				18CEBF3A2878F1980089F40D /* ProfileViewController.swift */,
-				18CEBF3B2878F1980089F40D /* ProfileViewController.xib */,
+				18310097287B4AA100027C00 /* ApiService */,
+				1831008B287B415D00027C00 /* ViewModel */,
+				1831008A287B415300027C00 /* Model */,
+				18310089287B414800027C00 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -339,9 +395,9 @@
 		18CEBF0C2878877F0089F40D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1831009A287B642000027C00 /* Cells */,
 				18CEBF08287885A80089F40D /* HomeViewController.swift */,
 				18CEBF09287885A80089F40D /* HomeViewController.xib */,
-				18CEBF1E287897A30089F40D /* PostCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,9 +439,7 @@
 			isa = PBXGroup;
 			children = (
 				18CEBF232878980F0089F40D /* PostViewCell.swift */,
-				18CEBF242878980F0089F40D /* PostViewCell.xib */,
-				18CEBF312878BBF10089F40D /* HeaderView.swift */,
-				18CEBF322878BBF10089F40D /* HeaderView.xib */,
+				1831009D287B663500027C00 /* PostViewCell.xib */,
 			);
 			path = PostCell;
 			sourceTree = "<group>";
@@ -522,17 +576,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18310094287B424900027C00 /* HeaderProfileCell.xib in Resources */,
 				18CEBF3D2878F1980089F40D /* ProfileViewController.xib in Resources */,
 				18CEBEDF28787F470089F40D /* LaunchScreen.storyboard in Resources */,
 				18CEBF392878ECAD0089F40D /* CommetsViewController.xib in Resources */,
+				1831009E287B663500027C00 /* PostViewCell.xib in Resources */,
 				18CEBF1D287897480089F40D /* OnBoardingViewController.xib in Resources */,
 				18CEBEDC28787F470089F40D /* Assets.xcassets in Resources */,
 				1831007A287A068F00027C00 /* CommentCell.xib in Resources */,
 				18CEBF282878A46C0089F40D /* Colors.xcassets in Resources */,
 				18310088287A2F8100027C00 /* DescriptionCell.xib in Resources */,
-				18CEBF262878980F0089F40D /* PostViewCell.xib in Resources */,
 				18CEBF0B287885A80089F40D /* HomeViewController.xib in Resources */,
-				18CEBF342878BBF10089F40D /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,14 +716,15 @@
 			files = (
 				1831007E287A19A100027C00 /* Address.swift in Sources */,
 				18CEBF1628788AB00089F40D /* Api Services.swift in Sources */,
+				18310093287B424900027C00 /* HeaderProfileCell.swift in Sources */,
 				18CEBED328787F460089F40D /* AppDelegate.swift in Sources */,
 				18310082287A1AD300027C00 /* Company.swift in Sources */,
 				18503F6E2879EF69006CCF9D /* ViewModelComments.swift in Sources */,
+				18310099287B4AB600027C00 /* ApiServiceProfile.swift in Sources */,
 				18CEBED528787F460089F40D /* SceneDelegate.swift in Sources */,
 				18CEBF252878980F0089F40D /* PostViewCell.swift in Sources */,
 				18CEBF0A287885A80089F40D /* HomeViewController.swift in Sources */,
 				18310087287A2F8100027C00 /* DescriptionCell.swift in Sources */,
-				18CEBF332878BBF10089F40D /* HeaderView.swift in Sources */,
 				1831007C287A18E400027C00 /* User.swift in Sources */,
 				18503F682879E1AD006CCF9D /* UIViewExtension.swift in Sources */,
 				18503F712879F027006CCF9D /* ApiServices.swift in Sources */,
@@ -681,6 +736,7 @@
 				18CEBF1C287897480089F40D /* OnBoardingViewController.swift in Sources */,
 				18CEBF12287889FB0089F40D /* ViewModelHome.swift in Sources */,
 				18310079287A068F00027C00 /* CommentCell.swift in Sources */,
+				18310096287B439900027C00 /* ViewModelProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

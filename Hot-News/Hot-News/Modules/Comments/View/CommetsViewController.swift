@@ -53,11 +53,12 @@ class CommetsViewController: UIViewController {
     
     private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.bounds.height / 2
+        userImageView.contentMode = .scaleAspectFill
     }
     
     private func configurateHeader() {
-        titileLabel.text = viewModel.post.title
-        nameLabel.text = viewModel.user.name
+        titileLabel.text = viewModel.post.title.capitalized
+        nameLabel.text = "Write by: \(viewModel.user.name)"
         emailLabel.text = viewModel.user.email
     }
     
@@ -116,13 +117,14 @@ extension CommetsViewController: UICollectionViewDelegate {
 
 extension CommetsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.width - 32
         var heigth: CGFloat = 0.0
         guard indexPath.section == 0 else {
             heigth = takeHeigthOftTitle(text: viewModel.comments[indexPath.row].body, font: 14)
-            return CGSize(width: 380, height: heigth + 80)
+            return CGSize(width: width, height: heigth + 40)
         }
         heigth = takeHeigthOftTitle(text: viewModel.post.body, font: 20)
-        return CGSize(width: 350, height: heigth + 100)
+        return CGSize(width: width - 32, height: heigth + 120)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

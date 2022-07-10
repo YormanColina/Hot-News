@@ -11,6 +11,7 @@ import RxCocoa
 
 protocol ViewModelHomeProtocol {
     var posts: [Post] { get set }
+    var likes: Int { get set }
     func callService() -> Observable<[Post]>
 }
 
@@ -19,6 +20,7 @@ class ViewModelHome: ViewModelHomeProtocol {
     private var apiServices: ApiServicesProtocol
     private var disposeBag = DisposeBag()
     var posts: [Post] = []
+    var likes: Int = 0
   
     init(apiServices: ApiServicesProtocol = ApiServices()) {
         self .apiServices = apiServices
@@ -36,6 +38,4 @@ class ViewModelHome: ViewModelHomeProtocol {
             return Disposables.create()
         }
     }
-    
-    
 }

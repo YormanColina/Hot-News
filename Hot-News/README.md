@@ -46,9 +46,9 @@ Deberás entregar el link de Github del repositorio de tu proyecto.
   - Modulos 
     - Core: Contiene lógica que puede ser usada para todos los módulos
     - Onboarding : Todo lo referente a la vista del OnBoarding
-    - Profile : Todo lo referente a la vista del perfil
-    - Comments : Todo lo refernte a la vista de los comentarios
-    - Home : Todo lo referente a la vista de la Home
+    - Profile : Encargada de mostrar la informacion del usuario con el id y obteniendo tambien todos los posts del mismo(para este modulo se consumió el servicio https://jsonplaceholder.typicode.com/users/1/posts para los post, y https://jsonplaceholder.typicode.com/users/1 para la informacion del usuario, usando el usuario con el id 1 por defecto)
+    - Comments : Muestra los comentarios del post que el usuario seleccionó y la infotmacio4n del post y de quien lo realizó ( para este modulo se consumió el servicio https://jsonplaceholder.typicode.com/comments?postId= para acceder a los comentarios de cada post y https://jsonplaceholder.typicode.com/users/ para aceder a la informacion del dueño del post)
+    - Home : Muestra los post consumiendo el servicio https://jsonplaceholder.typicode.com/posts y da la opcion de darle like a un post y este like se guarda el el perfil
  - Hot-NewsTests : Tests Unitarios
  
  # Como esta estructurado cada módulo:

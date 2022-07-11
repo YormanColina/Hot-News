@@ -23,11 +23,15 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  - UserDefautls: Para guardar informacion en la memoria de la aplicacion
  - Cocoapods: Importacion de librerias externas
  
-# Dependencias: 
+# Arquitecrura:
+ Use la arquitectura MVVM(Modelo - Vista - VistaModelo) para la aplicacion por el alcance del proyecto al no ser de una funcionalidad tan extendida es mas sencilla la comunicacion entre las distintas partes de un modulo es de fail lectura y comprension
  
-
-
-Arquitectura:
+# Como esta estructurado el proyecto:
+- Hot-News
+ - Resources
+ - Base
+ - Modulos
+ 
  
 
 

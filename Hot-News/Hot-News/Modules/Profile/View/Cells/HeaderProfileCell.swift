@@ -9,14 +9,14 @@ import UIKit
 
 class HeaderProfileCell: UICollectionViewCell {
     // MARK: @IBOutlets
-    @IBOutlet weak var userImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var postsQuantityLabel: UILabel!
-    @IBOutlet weak var likesQuantityLabel: UILabel!
-    @IBOutlet weak var editProfileButton: UIButton!
-    @IBOutlet weak var emailLoader: UIView!
-    @IBOutlet weak var userNameLoader: UIView!
+    @IBOutlet private weak var userImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var userNameLabel: UILabel!
+    @IBOutlet private weak var postsQuantityLabel: UILabel!
+    @IBOutlet private weak var likesQuantityLabel: UILabel!
+    @IBOutlet private weak var editProfileButton: UIButton!
+    @IBOutlet private weak var emailLoader: UIView!
+    @IBOutlet private weak var userNameLoader: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

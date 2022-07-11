@@ -11,7 +11,7 @@ import RxCocoa
 
 class ProfileViewController: UIViewController {
     //MARK: @IBOutlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     
     //MARK: Properties

@@ -74,10 +74,9 @@ class CommetsViewController: UIViewController {
         return heigth
     }
     
-    // MARK: IBActions
-   
+    
 }
-
+// MARK: UICollectionViewDataSource
 extension CommetsViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
@@ -111,11 +110,11 @@ extension CommetsViewController: UICollectionViewDataSource {
     }
     
 }
+// MARK: UICollectionViewDelegate
+extension CommetsViewController: UICollectionViewDelegate {}
 
-extension CommetsViewController: UICollectionViewDelegate {
-    
-}
 
+// MARK: UICollectionViewDelegateFlowLayout
 extension CommetsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width - 32

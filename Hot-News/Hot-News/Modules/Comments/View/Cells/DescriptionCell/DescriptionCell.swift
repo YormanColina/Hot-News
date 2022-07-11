@@ -9,12 +9,7 @@ import UIKit
 
 class DescriptionCell: UICollectionViewCell {
 
-    @IBOutlet weak var descriptionLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    @IBOutlet private weak var descriptionLabel: UILabel!
     
     func configureCell(description: String) {
         descriptionLabel.text = description

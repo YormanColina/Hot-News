@@ -17,7 +17,7 @@ protocol ViewModelCommentsProtocol {
 }
 
 class ViewModelComments: ViewModelCommentsProtocol {
-    var apiService: ApiServicesCommentsProtocol
+    private var apiService: ApiServicesCommentsProtocol
     var comments: [Comment] = []
     var post: Post
     var user: User

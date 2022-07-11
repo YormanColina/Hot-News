@@ -16,7 +16,7 @@ protocol ApiServicesProtocol {
 }
 
 struct ApiServices: ApiServicesProtocol {
-    var postsEndpoint: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
+    private let postsEndpoint: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
     
     func makeRequest() -> Observable<[Post]> {
         return Observable.create { observer in

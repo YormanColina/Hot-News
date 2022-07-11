@@ -20,10 +20,7 @@ class ApiServiceProfile: ApiServiceProfileProtocol {
     private var endPointPosts: String = "https://jsonplaceholder.typicode.com/users/1/posts"
     private var endPointUser: String = "https://jsonplaceholder.typicode.com/users/1"
  
-    
-    init() {
-        
-    }
+    init() {}
 
     func makeRequestPosts() -> Observable<[Post]> {
         return Observable.create { observer in

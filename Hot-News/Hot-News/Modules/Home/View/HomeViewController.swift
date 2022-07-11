@@ -11,9 +11,9 @@ import RxCocoa
 
 class HomeViewController: UIViewController {
     // MARK: IBoutlets
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var profileButton: UIButton!
-    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var profileButton: UIButton!
+    @IBOutlet private weak var profileImage: UIImageView!
     
     // MARK: Properties
     private var viewModel: ViewModelHomeProtocol
@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Methods
     
-    func setupUI() {
+    private func setupUI() {
         collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
         profileImage.layer.cornerRadius = profileImage.bounds.height / 2
         profileImage.image = UIImage(named: "user1")
@@ -40,12 +40,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       subscribeToHomeInformation()
+        setupUI()
+        configureCollection()
+    }
+    
+    private func subscribeToHomeInformation() {
         viewModel.callService()
             .subscribe { posts in
                 self.collectionView.reloadData()
             }.disposed(by: disposeBag)
-        setupUI()
-        configureCollection()
     }
     
     private func configureCollection() {
@@ -61,7 +65,7 @@ class HomeViewController: UIViewController {
     
     // MARK: IBActions
     
-    @IBAction func openProfileView(_ sender: Any) {
+    @IBAction private func openProfileView(_ sender: Any) {
         navigationController?.pushViewController(ProfileViewController(), animated: true)
     }
 }

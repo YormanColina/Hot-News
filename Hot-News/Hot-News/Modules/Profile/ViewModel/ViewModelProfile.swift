@@ -17,7 +17,6 @@ protocol ViewModelProfileProtocol {
 }
 
 class ViewModelProfile: ViewModelProfileProtocol {
-    private let disposebag = DisposeBag()
     private var apiServices: ApiServiceProfileProtocol
     var posts: [Post] = []
     var user: User

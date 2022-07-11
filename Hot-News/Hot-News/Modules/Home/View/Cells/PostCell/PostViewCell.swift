@@ -11,20 +11,18 @@ import RxSwift
 
 protocol PostViewCellDelegate: AnyObject {
     func onLikedPost(with postId: Int)
-    
 }
 
 class PostViewCell: UICollectionViewCell {
     // MARK: IBOutlet:
-    @IBOutlet weak var titlePostLabel: UILabel!
-    @IBOutlet weak var userPostImageView: UIImageView!
-    @IBOutlet weak var leadingView: UIView!
-    @IBOutlet weak var likeButton: UIButton!
-    @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var likeImageView: UIImageView!
+    @IBOutlet private weak var titlePostLabel: UILabel!
+    @IBOutlet private weak var userPostImageView: UIImageView!
+    @IBOutlet private weak var leadingView: UIView!
+    @IBOutlet private weak var likeButton: UIButton!
+    @IBOutlet private weak var descriptionLabel: UILabel!
+    @IBOutlet private weak var likeImageView: UIImageView!
     
     //MARK: Properties
-    var subject = PublishSubject<Int>()
     weak var delegate: PostViewCellDelegate?
     private var post: Post?
     

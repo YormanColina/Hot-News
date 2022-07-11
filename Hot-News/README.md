@@ -18,10 +18,12 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  
  - UIKit: Para la construcccion de vistas
  - RXSwift y RXCocoa: Para la comunicación reactiva entre las partes de la arquitectura
+ - Alamofire: Para la conexion de red con la API pública
+ - ObjectMapper: Para el mapeo de datos
+ - UserDefautls: Para guardar informacion en la memoria de la aplicacion
+ - Cocoapods: Importacion de librerias externas
  
-
-
-Dependencias: 
+# Dependencias: 
  
 
 

@@ -16,6 +16,9 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  
 # Herramientas:
  
+ - UIKit: Para la construcccion de vistas
+ - RXSwift y RXCocoa: Para la comunicación reactiva entre las partes de la arquitectura
+ 
 
 
 Dependencias: 

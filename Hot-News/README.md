@@ -17,9 +17,15 @@ Esta Aplicación esta construida en base una API pública, el proyecto consta de
  
  # Requerimientos
  
- <div align='center'>
-<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Requerimientos.png" align="center" height=500></a>
- </div>
+Tu reto será desarrollar una app para iOS utilizando UiKt como UI framework y que consuma una API pública. Nosotros seremos los users de tu app, así que, además de una revisión técnica, analizaremos la experiencia de la app en general. 
+Deberás entregar el link de Github del repositorio de tu proyecto. 
+-Must 
+   - Debe permitir listar los todo’s. 
+   - Se debe poder ver el detalle de cada uno de los todo’s. 
+   - Entregar una correcta documentación del proyecto realizado (lo puedes colocar en el README de tu proyecto). 
+Bonus 
+   - Mostrar los comentarios asociados a cada todo. 
+   - Realizar los tests unitarios de los casos de uso que consideres necesarios. Explica la arquitectura que utilizaste y porqué la escogiste.
  
 # Herramientas:
  

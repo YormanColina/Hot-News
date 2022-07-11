@@ -27,21 +27,16 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  Use la arquitectura MVVM(Modelo - Vista - VistaModelo) para la aplicacion por el alcance del proyecto al no ser de una funcionalidad tan extendida es mas sencilla la comunicacion entre las distintas partes de un modulo es de fail lectura y comprension
  
 # Como esta estructurado el proyecto:
-- Hot-News
-  - Resources
-  - Base
+- Hot-News : Carpeta base del proyecto
+  - Resources : Todas las imagenes y colores
+  - Base: AppDelegate, SceneDelegate, LaunchScreen
   - Modulos 
-    - Core
-    - Onboarding
-    - Profile
-    - Comments
-    - Home
- - Hot-NewsTests
- - Hot-NewsUITests
- - Pods
- 
- 
-
+    - Core: Contiene logica que puede ser usada para todos los modulos
+    - Onboarding : Todo lo referente a la vista del OnBoarding
+    - Profile : Todo lo referente a la vista del perfil
+    - Comments : Todo lo refernte a la vista de los comentarios
+    - Home : Todo lo referente a la vista de la Home
+ - Hot-NewsTests : Tests Unitarios
 
 <!--   <a href="url"><img src="https://github.com/YormanColina/Jobly/blob/main/resources/MVC.drawio.png" align="center"></a>-->
 </div>

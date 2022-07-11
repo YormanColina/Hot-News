@@ -18,13 +18,13 @@ protocol ViewModelHomeProtocol {
 class ViewModelHome: ViewModelHomeProtocol {
     // MARK: Properties
     private let storageKey = "liked_posts"
-    private let apiServices: ApiServicesProtocol
+    private let apiServices: ApiServicesProtocolHome
     private let disposeBag = DisposeBag()
     private let storage = UserDefaults.standard
     var posts: [Post] = []
     
     
-    init(apiServices: ApiServicesProtocol = ApiServices()) {
+    init(apiServices: ApiServicesProtocolHome = ApiServicesHome()) {
         self .apiServices = apiServices
     }
     

@@ -11,11 +11,11 @@ import ObjectMapper
 import RxSwift
 import RxCocoa
 
-protocol ApiServicesProtocol {
+protocol ApiServicesProtocolHome {
     func makeRequest() -> Observable<[Post]>
 }
 
-struct ApiServices: ApiServicesProtocol {
+struct ApiServicesHome: ApiServicesProtocolHome {
     private let postsEndpoint: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
     
     // // Call the network service through Alamofire and transform the data into an array of publications using ObjectMapper and sending the instances through a signal using RxSwift, in case of error an error signal is sent

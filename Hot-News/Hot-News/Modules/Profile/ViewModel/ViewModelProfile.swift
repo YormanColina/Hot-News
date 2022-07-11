@@ -10,17 +10,24 @@ import RxCocoa
 import RxSwift
 
 protocol ViewModelProfileProtocol {
-    func getProfileDetail() -> Observable<(User, [Post])>
     var posts: [Post] { get set  }
     var user: User { get set }
+    var likes: Int { get }
+    func getProfileDetail() -> Observable<(User, [Post])>
 }
 
 class ViewModelProfile: ViewModelProfileProtocol {
+    private let disposebag = DisposeBag()
     private var apiServices: ApiServiceProfileProtocol
     var posts: [Post] = []
     var user: User
-    private let disposebag = DisposeBag()
-    
+    var likes: Int {
+        let storageKey = "liked_posts"
+        let storage = UserDefaults.standard
+        let postIds = storage.object(forKey: storageKey) as? [Int] ?? [Int]()
+        return postIds.count
+    }
+   
     init(apiServices: ApiServiceProfileProtocol = ApiServiceProfile()) {
         self.apiServices = apiServices
         user = User()

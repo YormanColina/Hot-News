@@ -16,17 +16,19 @@ class CommentCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
     }
     
     func configurateCell(comment: Comment) {
         nameLabel.text = comment.name.capitalized
         emailLabel.text = comment.email
         commentLabel.text = comment.body
+        userImageView.image = UIImage(named: comment.userImage)
     }
     
     private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.bounds.height / 2
+        userImageView.contentMode = .scaleAspectFill
     }
 
 }

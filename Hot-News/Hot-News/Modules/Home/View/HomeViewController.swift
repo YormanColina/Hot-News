@@ -19,8 +19,6 @@ class HomeViewController: UIViewController {
     private var viewModel: ViewModelHomeProtocol
     private var disposeBag = DisposeBag()
     
-    
-    
     // MARK: Initializers
     init() {
         self.viewModel = ViewModelHome()
@@ -29,6 +27,15 @@ class HomeViewController: UIViewController {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: Methods
+    
+    func setupUI() {
+        collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
+        profileImage.layer.cornerRadius = profileImage.bounds.height / 2
+        profileImage.image = UIImage(named: "user1")
+        profileImage.contentMode = .scaleAspectFill
     }
     
     override func viewDidLoad() {
@@ -52,13 +59,6 @@ class HomeViewController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
-    
-    // MARK: Methods
-    func setupUI() {
-        collectionView.contentInset = UIEdgeInsets(top: 70, left: 0, bottom: 0, right: 0)
-        profileImage.layer.cornerRadius = profileImage.bounds.height / 2
-    }
-    
     // MARK: IBActions
     
     @IBAction func openProfileView(_ sender: Any) {
@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-
+// MARK: UICollectionViewDataSource
 extension HomeViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,6 +74,7 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         cell.configurateCell(post: viewModel.posts[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
@@ -87,6 +88,8 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
+
+// MARK: UICollectionViewDelegateFlowLayout
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 360, height: 110)
@@ -96,9 +99,18 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+
+// MARK: UICollectionViewDelegate
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         present(CommetsViewController(post: viewModel.posts[indexPath.row]), animated: true)
     }
+}
+
+extension HomeViewController: PostViewCellDelegate {
+    func onLikedPost(with postId: Int) {
+        viewModel.saveLikePost(id: postId)
+    }
+    
 }
 

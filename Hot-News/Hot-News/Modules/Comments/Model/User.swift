@@ -26,7 +26,7 @@ struct User: Mappable {
     mutating func mapping(map: Map) {
         id <- map ["id"]
         name <- map ["name"]
-        userName <- map ["userName"]
+        userName <- map ["username"]
         email <- map ["email"]
         address <- map ["address"]
         phone <- map ["phone"]

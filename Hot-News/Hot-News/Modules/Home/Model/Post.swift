@@ -14,6 +14,15 @@ struct Post: Mappable {
     var id: Int = 0
     var title: String = ""
     var body: String = ""
+    var isLiked: Bool {
+        let storageKey = "liked_posts"
+        let storage = UserDefaults.standard
+        let postIds = storage.object(forKey: storageKey) as? [Int] ?? [Int]()
+        return postIds.contains(id)
+    }
+    var imageUser: String {
+        return "user\(userID)"
+    }
     
     init() {}
     

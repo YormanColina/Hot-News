@@ -14,6 +14,10 @@ struct Comment: Mappable {
     var name: String = ""
     var email: String = ""
     var body: String = ""
+    var userImage: String {
+        let random = Int.random(in: 1...10)
+        return "user\(random)"
+    }
     
     init?(map: Map) {}
     

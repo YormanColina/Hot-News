@@ -53,6 +53,7 @@ class CommetsViewController: UIViewController {
     
     private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.bounds.height / 2
+        userImageView.image = UIImage(named: viewModel.post.imageUser)
         userImageView.contentMode = .scaleAspectFill
     }
     
@@ -123,12 +124,13 @@ extension CommetsViewController: UICollectionViewDelegateFlowLayout {
             heigth = takeHeigthOftTitle(text: viewModel.comments[indexPath.row].body, font: 14)
             return CGSize(width: width, height: heigth + 40)
         }
-        heigth = takeHeigthOftTitle(text: viewModel.post.body, font: 20)
-        return CGSize(width: width - 32, height: heigth + 120)
+        heigth = takeHeigthOftTitle(text: viewModel.post.body, font: 16)
+        print(heigth)
+        return CGSize(width: width - 32, height: heigth + 80)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 20
+        return section == 0 ? 0.0 : 20
     }
 }
 

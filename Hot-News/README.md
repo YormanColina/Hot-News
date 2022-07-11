@@ -1,5 +1,5 @@
 <div align='center'>
-
+Home
 <a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Home.png" align="leading" height=500></a>
 
 <a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Profile.png" align="center" height=500></a>

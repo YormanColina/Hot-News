@@ -29,8 +29,10 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
 # Como esta estructurado el proyecto:
 - Hot-News
   - Resources
+    - Assets
+    - Colors
   - Base
-  - Modulos
+  - Modulos 
  
  
 

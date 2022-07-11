@@ -10,9 +10,9 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  
  # Requerimientos
  
- 
+ <div align='center'>
 <a href="url"><img src="https://github.com/YormanColina/Hot-News/edit/main/Hot-News/Requerimientos.png" align="center" height="20"></a>
- 
+ </div>
 Herramientas:
  
 
@@ -24,13 +24,13 @@ Dependencias:
 Arquitectura:
  
 
- <div align='center'>
+
 <!--   <a href="url"><img src="https://github.com/YormanColina/Jobly/blob/main/resources/MVC.drawio.png" align="center"></a>-->
 </div>
  
 <div align='center'>
     Relacion entre las las clases del modulo
-</div>
+
  
 </div>
 

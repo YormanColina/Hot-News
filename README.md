@@ -62,6 +62,6 @@ Deberás entregar el link de Github del repositorio de tu proyecto.
  - git clone git@github.com:YormanColina/Hot-News.git
  - cd Hot-News/
  - pod install
- - open .workspace
+ - open Hot-News.xcworkspace
  - command + R
  

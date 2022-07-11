@@ -7,6 +7,8 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  3) La informacion del usuario que realizo el post. 
  4) Todos los posts realizados por un usuario
 
+ 
+ 
 <a href="url"><img src="https://github.com/YormanColina/Jobly/blob/main/resources/blanco.drawio.png" align="center" height="20"></a>
  
 Herramientas:

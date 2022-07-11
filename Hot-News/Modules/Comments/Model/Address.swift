@@ -24,6 +24,5 @@ struct Address: Mappable {
         city  <- map ["city"]
         zipcode <- map ["zipcode"]
     }
-    
 
 }

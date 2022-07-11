@@ -23,6 +23,5 @@ struct Company: Mappable {
        bs <- map ["name"]
     }
     
-    
 }
 

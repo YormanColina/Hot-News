@@ -18,7 +18,6 @@ struct User: Mappable {
     var website: String = ""
     var company: Company = Company()
     
-    
     init() {}
     
     init?(map: Map) {}
@@ -33,6 +32,5 @@ struct User: Mappable {
         website <- map ["website"]
         company <- map ["company"]
     }
-    
     
 }

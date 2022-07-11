@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 protocol ViewModelHomeProtocol {
-    var posts: [Post] { get set }
+    var posts: [Post] { get }
     func callService() -> Observable<[Post]>
     func saveLikePost(id: Int)
 }
@@ -23,7 +23,6 @@ class ViewModelHome: ViewModelHomeProtocol {
     private let storage = UserDefaults.standard
     var posts: [Post] = []
     
-    
     init(apiServices: ApiServicesProtocolHome = ApiServicesHome()) {
         self .apiServices = apiServices
     }
@@ -32,15 +31,8 @@ class ViewModelHome: ViewModelHomeProtocol {
     
     // Call the ApiService so that it makes the call to the network and receive the post array through a subscription to the signal that it sends and create an observable in which the list of received messages is sent
     func callService() -> Observable<[Post]> {
-        return Observable.create { observer in
-            self.apiServices.makeRequest()
-                .subscribe { posts in
-                    self.posts = posts
-                    observer.on(.next(posts))
-                } onError: { error in
-                    print(error.localizedDescription)
-                }.disposed(by: self.disposeBag)
-            return Disposables.create()
+        return apiServices.makeRequest().do { posts in
+            self.posts = posts
         }
     }
     

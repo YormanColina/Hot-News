@@ -8,7 +8,6 @@
 import Foundation
 import ObjectMapper
 
-
 struct Post: Mappable {
     var userID: Int = 0
     var id: Int = 0

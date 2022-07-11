@@ -40,15 +40,15 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       subscribeToHomeInformation()
+        subscribeToHomeInformation()
         setupUI()
         configureCollection()
     }
     
     private func subscribeToHomeInformation() {
         viewModel.callService()
-            .subscribe { posts in
-                self.collectionView.reloadData()
+            .subscribe { [weak self] posts in
+                self?.collectionView.reloadData()
             }.disposed(by: disposeBag)
     }
     

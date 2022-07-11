@@ -28,7 +28,7 @@ class ViewModelComments: ViewModelCommentsProtocol {
         self.user = User()
     }
     
-    // // Call the ApiService functions that call the services and obtain the observables to combine the two signals they send and transform them into a tuple signal through the zip operator
+    // Call the ApiService functions that call the services and obtain the observables to combine the two signals they send and transform them into a tuple signal through the zip operator
     func getPostDetails() -> Observable<([Comment], User)> {
         let commentsSignal = apiService.makeCommentsRequest(id: post.id)
         let userSignal = apiService.makeUserRequest(id: post.userID)

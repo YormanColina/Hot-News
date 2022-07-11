@@ -51,14 +51,13 @@ class CommetsViewController: UIViewController {
     // Subscribe to the signal of the call to the ApiServices and receive the comments of the publication and the user detail
     private func subscribeToCommentsInformation() {
         viewModel.getPostDetails()
-            .subscribe(onNext:  { (comments, user) in
-                self.viewModel.comments = comments
-                self.viewModel.user = user
-                self.configurateHeader()
-                self.collectionview.reloadData()
+            .subscribe(onNext: { [weak self] (comments, user) in
+                self?.viewModel.comments = comments
+                self?.viewModel.user = user
+                self?.configurateHeader()
+                self?.collectionview.reloadData()
             }).disposed(by: disposeBag)
     }
-    
     
     // Configure UI
     private func setupUI() {

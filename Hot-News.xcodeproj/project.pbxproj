@@ -41,8 +41,6 @@
 		18CEBF10287887D40089F40D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF0F287887D40089F40D /* Post.swift */; };
 		18CEBF12287889FB0089F40D /* ViewModelHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF11287889FB0089F40D /* ViewModelHome.swift */; };
 		18CEBF1628788AB00089F40D /* Api Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF1528788AB00089F40D /* Api Services.swift */; };
-		18CEBF1C287897480089F40D /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF1A287897470089F40D /* OnBoardingViewController.swift */; };
-		18CEBF1D287897480089F40D /* OnBoardingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF1B287897470089F40D /* OnBoardingViewController.xib */; };
 		18CEBF282878A46C0089F40D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF272878A46C0089F40D /* Colors.xcassets */; };
 		18CEBF382878ECAD0089F40D /* CommetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CEBF362878ECAD0089F40D /* CommetsViewController.swift */; };
 		18CEBF392878ECAD0089F40D /* CommetsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CEBF372878ECAD0089F40D /* CommetsViewController.xib */; };
@@ -109,8 +107,6 @@
 		18CEBF0F287887D40089F40D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		18CEBF11287889FB0089F40D /* ViewModelHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelHome.swift; sourceTree = "<group>"; };
 		18CEBF1528788AB00089F40D /* Api Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Api Services.swift"; sourceTree = "<group>"; };
-		18CEBF1A287897470089F40D /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
-		18CEBF1B287897470089F40D /* OnBoardingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingViewController.xib; sourceTree = "<group>"; };
 		18CEBF272878A46C0089F40D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		18CEBF362878ECAD0089F40D /* CommetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommetsViewController.swift; sourceTree = "<group>"; };
 		18CEBF372878ECAD0089F40D /* CommetsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommetsViewController.xib; sourceTree = "<group>"; };
@@ -190,13 +186,6 @@
 				1831008C287B416F00027C00 /* Cells */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		1831008A287B415300027C00 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		1831008B287B415D00027C00 /* ViewModel */ = {
@@ -360,7 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				18503F692879E1B8006CCF9D /* Core */,
-				18CEBF19287897270089F40D /* OnBoarding */,
 				18CEBF05287885550089F40D /* Profile */,
 				18CEBF042878854A0089F40D /* Comments */,
 				18CEBF03287885430089F40D /* Home */,
@@ -395,7 +383,6 @@
 			children = (
 				18310097287B4AA100027C00 /* ApiService */,
 				1831008B287B415D00027C00 /* ViewModel */,
-				1831008A287B415300027C00 /* Model */,
 				18310089287B414800027C00 /* View */,
 			);
 			path = Profile;
@@ -452,15 +439,6 @@
 				18CEBF1528788AB00089F40D /* Api Services.swift */,
 			);
 			path = ApiServices;
-			sourceTree = "<group>";
-		};
-		18CEBF19287897270089F40D /* OnBoarding */ = {
-			isa = PBXGroup;
-			children = (
-				18CEBF1A287897470089F40D /* OnBoardingViewController.swift */,
-				18CEBF1B287897470089F40D /* OnBoardingViewController.xib */,
-			);
-			path = OnBoarding;
 			sourceTree = "<group>";
 		};
 		18CEBF1E287897A30089F40D /* PostCell */ = {
@@ -609,7 +587,6 @@
 				18CEBEDF28787F470089F40D /* LaunchScreen.storyboard in Resources */,
 				18CEBF392878ECAD0089F40D /* CommetsViewController.xib in Resources */,
 				183100A2287B758F00027C00 /* HeaderCell.xib in Resources */,
-				18CEBF1D287897480089F40D /* OnBoardingViewController.xib in Resources */,
 				183100AA287BC4B400027C00 /* PostViewCell.xib in Resources */,
 				18CEBEDC28787F470089F40D /* Assets.xcassets in Resources */,
 				1831007A287A068F00027C00 /* CommentCell.xib in Resources */,
@@ -764,7 +741,6 @@
 				18CEBF10287887D40089F40D /* Post.swift in Sources */,
 				18310080287A1A6700027C00 /* Location.swift in Sources */,
 				18CEBF382878ECAD0089F40D /* CommetsViewController.swift in Sources */,
-				18CEBF1C287897480089F40D /* OnBoardingViewController.swift in Sources */,
 				18CEBF12287889FB0089F40D /* ViewModelHome.swift in Sources */,
 				18310079287A068F00027C00 /* CommentCell.swift in Sources */,
 				18310096287B439900027C00 /* ViewModelProfile.swift in Sources */,

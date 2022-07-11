@@ -39,11 +39,10 @@ class ProfileViewController: UIViewController {
     // Subscribe to the signal of the call to the ApiServices and get the messages and the user
     private func subscribeToProfileInformation() {
         viewModel.getProfileDetail()
-            .take(until: self.rx.deallocated)
-            .subscribe { user, posts in
-                self.viewModel.posts = posts
-                self.viewModel.user = user
-                self.collectionView.reloadData()
+            .subscribe { [weak self] user, posts in
+                self?.viewModel.posts = posts
+                self?.viewModel.user = user
+                self?.collectionView.reloadData()
             }.disposed(by: disposeBag)
     }
     

@@ -21,5 +21,4 @@ struct Location: Mappable {
         log <- map ["lng"]
     }
     
-    
 }

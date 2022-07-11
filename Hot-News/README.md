@@ -11,7 +11,7 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  # Requerimientos
  
  
-<a href="url"><img src="https://github.com/YormanColina/Jobly/blob/main/resources/blanco.drawio.png" align="center" height="20"></a>
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/edit/main/Hot-News/" align="center" height="20"></a>
  
 Herramientas:
  

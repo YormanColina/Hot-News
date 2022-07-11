@@ -37,8 +37,13 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
     - Comments : Todo lo refernte a la vista de los comentarios
     - Home : Todo lo referente a la vista de la Home
  - Hot-NewsTests : Tests Unitarios
+ 
+ # Como esta estructurado cada modulo:
+- View: Contiene todo lo referente a la UI
+- ViewModel: Contiene toda la logica del modulo
+- Models: Contiene los modelos de datos
+- ApiService(extension de la arquitectura): Contiene los llamados a la red
 
-<!--   <a href="url"><img src="https://github.com/YormanColina/Jobly/blob/main/resources/MVC.drawio.png" align="center"></a>-->
 </div>
  
 <div align='center'>

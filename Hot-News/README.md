@@ -11,7 +11,7 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
  # Requerimientos
  
  <div align='center'>
-<a href="url"><img src="https://github.com/YormanColina/Hot-News/edit/main/Hot-News/Requerimientos.png" align="center" height="20"></a>
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Requerimientos.png" align="center" height="20"></a>
  </div>
 Herramientas:
  

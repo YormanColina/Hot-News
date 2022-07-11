@@ -32,6 +32,7 @@ class PostViewCell: UICollectionViewCell {
         setupUICell()
     }
     
+    // configure UI of cell
     private func setupUICell() {
         leadingView.backgroundColor = .blue
         leadingView.backgroundColor = UIColor(named: "customBlue")
@@ -53,6 +54,7 @@ class PostViewCell: UICollectionViewCell {
         contentView.layer.masksToBounds = true
     }
     
+        // Configure info of cell
     func configurateCell(post: Post, showLikeButton: Bool = true) {
         self.post = post
         titlePostLabel.text = post.title.capitalized
@@ -63,6 +65,8 @@ class PostViewCell: UICollectionViewCell {
     }
 
     //MARK: IBActions
+    
+    // Action of press like Button
     @IBAction func pressLike(_ sender: Any) {
         guard let delegate = delegate, let post = post else {
             return
@@ -72,6 +76,7 @@ class PostViewCell: UICollectionViewCell {
         configLikeIcon()
     }
     
+    // Configure like icon of cell
     private func configLikeIcon() {
         guard let post = post else {
             return

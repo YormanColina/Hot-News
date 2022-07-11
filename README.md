@@ -60,7 +60,7 @@ Deberás entregar el link de Github del repositorio de tu proyecto.
  
  # Como correr el proyecto:
  - git clone git@github.com:YormanColina/Hot-News.git
- - cd path del proyecto
+ - cd Hot-News/
  - pod install
  - open .workspace
  - command + R

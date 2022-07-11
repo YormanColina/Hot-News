@@ -21,7 +21,8 @@ class ApiServiceProfile: ApiServiceProfileProtocol {
     private var endPointUser: String = "https://jsonplaceholder.typicode.com/users/1"
  
     init() {}
-
+    
+    // Call the network service through Alamofire and transform the data into an array of publications using ObjectMapper and sending the instances through a signal using RxSwift, in case of error an error signal is sent
     func makeRequestPosts() -> Observable<[Post]> {
         return Observable.create { observer in
             AF.request(self.endPointPosts).responseJSON { response in
@@ -36,7 +37,7 @@ class ApiServiceProfile: ApiServiceProfileProtocol {
         }
     }
     
-    
+    // Call the network service through Alamofire and transform the data into a user model using ObjectMapper and sending the instances through a signal using RxSwift, in case of error an error signal is sent
     func makeRequestUser() -> Observable<User> {
         return Observable.create { observer in
             AF.request(self.endPointUser).responseJSON { response in

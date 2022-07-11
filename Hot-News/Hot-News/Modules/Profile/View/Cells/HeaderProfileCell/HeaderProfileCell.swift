@@ -20,15 +20,17 @@ class HeaderProfileCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureCell()
+        setupUI()
     }
     
-    private func configureCell() {
+    // Configure UI of cell
+    private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.bounds.width / 2
         userImageView.contentMode = .scaleAspectFill
     }
     
-    func setupCell(user: User, post: Int, likes: Int) {
+    // Configure cell information
+    func configureCell(user: User, post: Int, likes: Int) {
         nameLabel.text = user.userName
         userNameLabel.text = user.email
         emailLoader.backgroundColor = .clear

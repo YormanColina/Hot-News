@@ -18,6 +18,7 @@ protocol ApiServicesProtocol {
 struct ApiServices: ApiServicesProtocol {
     private let postsEndpoint: URL = URL(string: "https://jsonplaceholder.typicode.com/posts")!
     
+    // // Call the network service through Alamofire and transform the data into an array of publications using ObjectMapper and sending the instances through a signal using RxSwift, in case of error an error signal is sent
     func makeRequest() -> Observable<[Post]> {
         return Observable.create { observer in
             AF.request(postsEndpoint).responseJSON { response in

@@ -20,6 +20,7 @@ class ApiServicesComments: ApiServicesCommentsProtocol {
     private var commentsEndPoint: String = "https://jsonplaceholder.typicode.com/comments?postId="
     private var userEndpoint: String = "https://jsonplaceholder.typicode.com/users/"
     
+    // Call the network service via Alamofire and transform the data into a comment array using ObjectMapper and sending the instances through a signal using RxSwift, on error an error signal is sent
     func makeCommentsRequest(id: Int) -> Observable<[Comment]> {
         return Observable.create { observer in
             let id = String(id)
@@ -35,6 +36,7 @@ class ApiServicesComments: ApiServicesCommentsProtocol {
         }
     }
     
+    // Call the network service via Alamofire and transform the data into a user model using ObjectMapper and sending the instances through a signal using RxSwift, on error an error signal is sent
     func makeUserRequest(id: Int) -> Observable<User> {
         return Observable.create { observer in
             let id = String(id)

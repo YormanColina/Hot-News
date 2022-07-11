@@ -16,6 +16,7 @@ class CommetsViewController: UIViewController {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var userImageView: UIImageView!
     @IBOutlet private weak var titileLabel: UILabel!
+    
     // MARK: Properties
     private var viewModel: ViewModelCommentsProtocol
     private var disposeBag = DisposeBag()
@@ -32,12 +33,23 @@ class CommetsViewController: UIViewController {
 
     
     // MARK: Methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollection()
+        subscribeToCommentsInformation()
+        setupUI()
+    }
+    
+    // Configure collectionView
+    private func configureCollection() {
+        collectionview.delegate = self
+        collectionview.dataSource = self
         collectionview.register(UINib(nibName: "CommentCell", bundle: nil), forCellWithReuseIdentifier: "CommentCell")
         collectionview.register(UINib(nibName: "DescriptionCell", bundle: nil), forCellWithReuseIdentifier: "DescriptionCell")
-        
+    }
+    
+    // Subscribe to the signal of the call to the ApiServices and receive the comments of the publication and the user detail
+    private func subscribeToCommentsInformation() {
         viewModel.getPostDetails()
             .subscribe(onNext:  { (comments, user) in
                 self.viewModel.comments = comments
@@ -45,24 +57,24 @@ class CommetsViewController: UIViewController {
                 self.configurateHeader()
                 self.collectionview.reloadData()
             }).disposed(by: disposeBag)
-        
-        setupUI()
-        collectionview.delegate = self
-        collectionview.dataSource = self
     }
     
+    
+    // Configure UI
     private func setupUI() {
         userImageView.layer.cornerRadius = userImageView.bounds.height / 2
         userImageView.image = UIImage(named: viewModel.post.imageUser)
         userImageView.contentMode = .scaleAspectFill
     }
     
+    // Configure header
     private func configurateHeader() {
         titileLabel.text = viewModel.post.title.capitalized
         nameLabel.text = "Write by: \(viewModel.user.name)"
         emailLabel.text = viewModel.user.email
     }
     
+    // Get text size
     private func takeHeigthOftTitle(text: String, font: CGFloat) -> CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 50))
         label.text = text
@@ -78,6 +90,7 @@ class CommetsViewController: UIViewController {
 }
 // MARK: UICollectionViewDataSource
 extension CommetsViewController: UICollectionViewDataSource {
+    // Register number of items in sections
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -85,6 +98,7 @@ extension CommetsViewController: UICollectionViewDataSource {
         return viewModel.comments.count
     }
     
+    // Register and configure cells
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 0 {
             guard let cellDescription = collectionView.dequeueReusableCell(withReuseIdentifier: "DescriptionCell", for: indexPath) as? DescriptionCell else {
@@ -105,6 +119,7 @@ extension CommetsViewController: UICollectionViewDataSource {
         }
     }
     
+    // Register number of sections
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -116,6 +131,7 @@ extension CommetsViewController: UICollectionViewDelegate {}
 
 // MARK: UICollectionViewDelegateFlowLayout
 extension CommetsViewController: UICollectionViewDelegateFlowLayout {
+    // Register size of items
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width - 32
         var heigth: CGFloat = 0.0
@@ -127,6 +143,7 @@ extension CommetsViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: width - 32, height: heigth + 80)
     }
     
+    // Register spacing of cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return section == 0 ? 0.0 : 20
     }

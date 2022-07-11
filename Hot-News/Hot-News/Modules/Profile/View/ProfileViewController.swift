@@ -13,7 +13,6 @@ class ProfileViewController: UIViewController {
     //MARK: @IBOutlets
     @IBOutlet private weak var collectionView: UICollectionView!
     
-    
     //MARK: Properties
     private var viewModel: ViewModelProfileProtocol
     private var disposeBag = DisposeBag()
@@ -37,6 +36,7 @@ class ProfileViewController: UIViewController {
         configureNavigationBar()
     }
     
+    // Subscribe to the signal of the call to the ApiServices and get the messages and the user
     private func subscribeToProfileInformation() {
         viewModel.getProfileDetail()
             .take(until: self.rx.deallocated)
@@ -47,15 +47,16 @@ class ProfileViewController: UIViewController {
             }.disposed(by: disposeBag)
     }
     
+    // Configure navigation bar
     private func configureNavigationBar() {
         navigationController?.navigationBar.isHidden = false
         configureCollection()
-        navigationItem.leftBarButtonItem = customizingNavigationBar(image: UIImage(named: "arrow")!, imageWidth: 20, imageHeight: 20, completion: {
+        navigationItem.leftBarButtonItem = customizingNavigationBarButton(image: UIImage(named: "arrow")!, imageWidth: 20, imageHeight: 20, completion: {
             dismissViewController()
         })
     }
     
-    
+    // Configure view collection
     private func configureCollection() {
         let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
         collectionView.delegate = self
@@ -66,11 +67,13 @@ class ProfileViewController: UIViewController {
         collectionView.register(UINib(nibName: "HeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "HeaderCell")
     }
     
+    // Hide profile
     @objc private func dismissViewController() {
         navigationController?.popViewController(animated: true)
     }
     
-    private func customizingNavigationBar(image: UIImage, imageWidth: CGFloat, imageHeight: CGFloat, completion: () -> Void) -> UIBarButtonItem {
+    // Customize navbar button
+    private func customizingNavigationBarButton(image: UIImage, imageWidth: CGFloat, imageHeight: CGFloat, completion: () -> Void) -> UIBarButtonItem {
         let buttonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         let leftImageView = UIImageView(frame: .zero)
@@ -100,6 +103,7 @@ class ProfileViewController: UIViewController {
         return buttonItem
     }
     
+    // Make the navigation bar transparent
     private func setupTransparentNavigationBar() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
@@ -119,7 +123,7 @@ extension ProfileViewController: UICollectionViewDataSource {
             guard let headerCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeaderProfileCell", for: indexPath) as? HeaderProfileCell else {
                 return UICollectionViewCell()
             }
-            headerCell.setupCell(user: viewModel.user, post: viewModel.posts.count, likes: viewModel.likes)
+            headerCell.configureCell(user: viewModel.user, post: viewModel.posts.count, likes: viewModel.likes)
             return headerCell
         default:
             guard let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostViewCell", for: indexPath) as? PostViewCell else {
@@ -137,7 +141,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         return header
     }
     
-    //
+    // Register number of items in section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 0 {
             return 1
@@ -145,7 +149,7 @@ extension ProfileViewController: UICollectionViewDataSource {
         return viewModel.posts.count
     }
     
-    
+    // Register numeber of sections
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -153,6 +157,8 @@ extension ProfileViewController: UICollectionViewDataSource {
 
 //MARK: UICollectionViewDelegateFlowLayout
 extension ProfileViewController: UICollectionViewDelegateFlowLayout {
+    
+    // Register size of cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
@@ -163,6 +169,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         }
     }
     
+    // Register size of header
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         if section == 0 {
             return CGSize(width: 0, height: 0)
@@ -170,6 +177,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
         return CGSize(width: UIScreen.main.bounds.width, height: 60)
     }
     
+    // Set cell spacing
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if section == 1 {
             return 20
@@ -180,6 +188,7 @@ extension ProfileViewController: UICollectionViewDelegateFlowLayout {
 
 //MARK: UICollectionViewDelegate
 extension ProfileViewController: UICollectionViewDelegate {
+    // Present CommentsViewController
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section == 1 {
             present(CommetsViewController(post: viewModel.posts[indexPath.row]), animated: true)

@@ -1,3 +1,7 @@
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Home.png" 
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Profile.png" 
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Comments.png" 
+                   
 #  Descripción 
 <div align='left'>
 Esta Aplicación esta construida en base una API pública, el proyecto consta de 3 módulos: La Home la cual muestra los posts de todos los usuarios y da la opción de dar like a un post, ofrece la facilidad de ver en completo el detalle de un post seleccionando cualquiera de sus celdas; el segundo módulo es el detalle de un post el cuál muestra al completo la información del post, información del usuario que lo realizó y todos los comentarios del mismo, y el perfíl el cual muestra información del usuario como la cantidad de post que este realizó y los posts a los que les ha dado like junto con una lista con todos los posts que éste ha realizado, para este proyecto se realizaron llamados a 4 servicios diferentes: 

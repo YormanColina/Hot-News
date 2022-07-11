@@ -206,10 +206,8 @@
 		1831008C287B416F00027C00 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				18310091287B424900027C00 /* HeaderProfileCell.swift */,
-				18310092287B424900027C00 /* HeaderProfileCell.xib */,
-				1831009F287B758F00027C00 /* HeaderCell.swift */,
-				183100A0287B758F00027C00 /* HeaderCell.xib */,
+				18BAA6B2287BE7C40059BDEA /* Header */,
+				18BAA6B1287BE7B00059BDEA /* HeaderProfileCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -282,6 +280,24 @@
 				18503F702879F027006CCF9D /* ApiServices.swift */,
 			);
 			path = ApiServices;
+			sourceTree = "<group>";
+		};
+		18BAA6B1287BE7B00059BDEA /* HeaderProfileCell */ = {
+			isa = PBXGroup;
+			children = (
+				18310091287B424900027C00 /* HeaderProfileCell.swift */,
+				18310092287B424900027C00 /* HeaderProfileCell.xib */,
+			);
+			path = HeaderProfileCell;
+			sourceTree = "<group>";
+		};
+		18BAA6B2287BE7C40059BDEA /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				183100A0287B758F00027C00 /* HeaderCell.xib */,
+				1831009F287B758F00027C00 /* HeaderCell.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		18CEBEC628787F460089F40D = {

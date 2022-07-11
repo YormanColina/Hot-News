@@ -124,7 +124,6 @@ extension CommetsViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: width, height: heigth + 40)
         }
         heigth = takeHeigthOftTitle(text: viewModel.post.body, font: 16)
-        print(heigth)
         return CGSize(width: width - 32, height: heigth + 80)
     }
     

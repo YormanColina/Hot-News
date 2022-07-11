@@ -1,6 +1,6 @@
 <div align='center'>
 <a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/HomeL.png" align="leading" height=500></a>
-<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Profile.png" align="center" height=500></a>
+<a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/ProfileL.png" align="center" height=500></a>
 <a href="url"><img src="https://github.com/YormanColina/Hot-News/blob/main/Hot-News/resources/Comments.png" align="trailing" height=500></a>
  </div>
   

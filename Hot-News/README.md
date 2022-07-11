@@ -44,6 +44,10 @@ Esta Aplicacion esta construida en base una API pública, el proyecto consta de 
 - Models: Contiene los modelos de datos
 - ApiService(extension de la arquitectura): Contiene los llamados a la red
 
+ 
+ # Como correr el proyecto:
+ - git clone 
+ 
 </div>
  
 <div align='center'>
